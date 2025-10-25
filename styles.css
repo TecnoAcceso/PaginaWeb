@@ -80,7 +80,8 @@ body {
 
 .preloader-logo {
     font-family: 'recharge', sans-serif;
-    font-size: 5rem;
+    /* font-size: 5rem; */
+    font-size: clamp(2.5rem, 10vw, 5rem);
     color: white;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -128,7 +129,8 @@ body {
 
 .nav-logo h2 {
     font-family: 'recharge', sans-serif;
-    font-size: 2.8rem;
+    /* font-size: 2.8rem; */
+    font-size: clamp(2rem, 7vw, 2.8rem);
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1011,12 +1013,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .preloader-logo {
-        font-size: 3.5rem;
-    }
-    .preloader-tagline {
-        font-size: 1.2rem;
-    }
     .nav-logo h2 {
         font-size: 2.2rem;
     }
@@ -1112,14 +1108,6 @@ body {
     }
 
     .hero-description {
-        font-size: 1rem;
-    }
-
-    .preloader-logo {
-        font-size: 2.5rem;
-    }
-
-    .preloader-tagline {
         font-size: 1rem;
     }
     
