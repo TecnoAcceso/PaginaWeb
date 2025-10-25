@@ -999,8 +999,15 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-logo {
+        max-width: 70%; /* Prevent logo from taking full width */
+    }
+    .nav-logo h2 {
+        font-size: 1.8rem; /* Reduce logo font size on mobile */
+    }
     .hamburger {
         display: flex;
+        flex-shrink: 0; /* Ensure hamburger icon doesn't shrink */
     }
     
     .nav-menu {
@@ -1051,6 +1058,14 @@ body {
     .hero-message h3 {
         font-size: 1.3rem;
         line-height: 1.2;
+    }
+
+    .preloader-logo {
+        font-size: 3rem; /* Reduce preloader logo font size */
+    }
+
+    .bar {
+        background: white; /* Make hamburger icon visible on hero */
     }
     
     .services-grid {
