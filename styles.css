@@ -132,6 +132,7 @@ body {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: white; /* Fallback for browsers that don't support background-clip */
     background: linear-gradient(45deg, #1e3a8a, #3b82f6, #60a5fa);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -999,6 +1000,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Give navbar a background from the start on mobile */
+    .navbar {
+        background: rgba(26, 26, 26, 0.85);
+        backdrop-filter: blur(15px);
+    }
+
     .nav-logo {
         max-width: 70%; /* Prevent logo from taking full width */
     }
@@ -1020,7 +1027,12 @@ body {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
+        padding: 1rem 0;
+    }
+
+    /* Make mobile menu links visible on white background */
+    .nav-menu .nav-link {
+        color: #333;
     }
     
     .nav-menu.active {
@@ -1031,6 +1043,7 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        padding-top: 70px; /* Add padding to avoid navbar overlap */
     }
     
     .hero-title {
@@ -1061,7 +1074,8 @@ body {
     }
 
     .preloader-logo {
-        font-size: 3rem; /* Reduce preloader logo font size */
+        font-size: 2.5rem; /* Aggressive font size reduction */
+        word-break: break-all; /* Break the word if it's still too long */
     }
 
     .bar {
